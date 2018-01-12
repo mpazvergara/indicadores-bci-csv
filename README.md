@@ -1,12 +1,14 @@
-# bci-indicadores-en-csv
+# indicadores-bci-csv
 
 Muestra los indicadores económicos en formato CSV desde la API de BCI
 
 ## Ejemplo de uso 
 
-En Google Spreadsheet escribir `=IMPORTDATA("https://"TU_SERVIDOR"/indicadores.csv")` para poder obtener una tabla con los nombres y valores de los indicadores que entrega la API de BCI
+En Google Spreadsheet escribir `=IMPORTDATA("https://indicadores-bci.herokuapp.com/indicadores.csv")` para poder obtener una tabla con los nombres y valores de los indicadores que entrega la API de BCI. Un ejemplo es:
 
-Si se quiere obtener solo el valor de un indicador, escribir `=IMPORTDATA("https://"TU_SERVIDOR"/indicadores/UF.csv")` y así obtener el valor de la UF.
+![heroku](./images/heroku.png)
+
+Si se quiere obtener solo el valor de un indicador, escribir `=IMPORTDATA("https://indicadores-bci.herokuapp.com/UF.csv")` y así por ejemplo obtener el valor de la UF.
 
 ## Para Comenzar
 
@@ -41,3 +43,5 @@ Se muestra que "Listening on tcp://0.0.0.0:5000" implica que el proyecto esta co
 ```
 ngrok http 5000
 ```
+
+Esto mostrará una dirección url que podrás usar en tu navegador para observar las respuestas de tu proyecto.
