@@ -6,7 +6,7 @@ Muestra los indicadores económicos en formato CSV desde la API de BCI
 
 En Google Spreadsheet escribir `=IMPORTDATA("https://indicadores-bci.herokuapp.com/indicadores.csv")` para poder obtener una tabla con los nombres y valores de los indicadores que entrega la API de BCI. Un ejemplo es:
 
-![example](./images/example.png)
+![example](./images/indicadorescsv.gif)
 
 Si se quiere obtener solo el valor de un indicador, escribir `=IMPORTDATA("https://indicadores-bci.herokuapp.com/UF.csv")` y así por ejemplo obtener el valor de la UF.
 
