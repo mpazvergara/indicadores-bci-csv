@@ -45,3 +45,32 @@ ngrok http 5000
 ```
 
 Esto mostrará una dirección url que podrás usar en tu navegador para observar las respuestas de tu proyecto.
+
+
+## Deployment
+
+Puedes usar [heroku](https://dashboard.heroku.com/) para subir tu proyecto, para esto crea una nueva aplicación desde la página y luego desde el terminal dentro de la carpeta de tu repositorio escribir:
+
+```
+$ heroku git:remote -a NOMBRE-DE-TU-APP
+```
+
+Al escribir `git remote -v` debería aparecer algo como esto:
+
+![github](./images/git-remote.png)
+
+Significa que ya tenemos nuestra app conectada con el repositorio.
+
+En este caso además usamos una API_KEY, esta también hay que guardarla en la app de heroku, así que escribe el siguiente código en terminal:
+
+```
+$ heroku config:set BCI_API_KEY=tu_api_key
+```
+
+Y ahora para subir el proyecto a la página, hay que escribir lo siguiente:
+
+```
+$ git push heroku master
+```
+
+Y para acceder a tu página sería algo como https://NOMBRE-DE-TU-APP.herokuapp.com
