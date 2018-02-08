@@ -1,13 +1,8 @@
 require 'sinatra'
 require 'bci'
 require 'csv'
-require 'rdiscount'
 
 BCI = Bci::Client.new({ key: ENV['BCI_API_KEY'] })
-
-get '/' do
-  markdown File.read("README.md")
-end
 
 get '/indicadores.csv' do
   kpi = BCI.stats.indicators['kpis']
