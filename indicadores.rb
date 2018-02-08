@@ -1,13 +1,8 @@
 require 'sinatra'
 require 'bci'
 require 'csv'
-require 'rdiscount'
 
 BCI = Bci::Client.new({ key: ENV['BCI_API_KEY'] })
-
-get '/' do
-  markdown File.read("README.md")
-end
 
 get '/indicadores.csv' do
   kpi = BCI.stats.indicators['kpis']
@@ -28,8 +23,6 @@ get '/*.csv' do |path|
       kpi.each do |kpi|
         if kpi['title'].downcase == path.downcase
           csv << [kpi['price']]
-        else
-          "No existe el indicador"
         end
       end
     end
